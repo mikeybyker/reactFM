@@ -2,6 +2,10 @@
   "name": "reactFM",
   "version": "1.0.0",
   "description": "A simple React.js app to search Last.fm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeybyker/reactFM.git"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.8.0",
-    "history": "^1.13.1",
+    "history": "1.13.x",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
-    "react-router": "^1.0.1"
+    "react-router": "^1.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.3.13",
