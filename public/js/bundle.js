@@ -24439,15 +24439,15 @@
 
 	var _Main2 = _interopRequireDefault(_Main);
 
-	var _Home = __webpack_require__(233);
+	var _Home = __webpack_require__(235);
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _Artist = __webpack_require__(234);
+	var _Artist = __webpack_require__(236);
 
 	var _Artist2 = _interopRequireDefault(_Artist);
 
-	var _AlbumInfo = __webpack_require__(240);
+	var _AlbumInfo = __webpack_require__(241);
 
 	var _AlbumInfo2 = _interopRequireDefault(_AlbumInfo);
 
@@ -24496,7 +24496,7 @@
 
 	var _music2 = _interopRequireDefault(_music);
 
-	var _ScreenInfo = __webpack_require__(232);
+	var _ScreenInfo = __webpack_require__(234);
 
 	var _ScreenInfo2 = _interopRequireDefault(_ScreenInfo);
 
@@ -24714,7 +24714,7 @@
 
 	var _music2 = _interopRequireDefault(_music);
 
-	var _Breadcrumbs = __webpack_require__(235);
+	var _Breadcrumbs = __webpack_require__(233);
 
 	var _Breadcrumbs2 = _interopRequireDefault(_Breadcrumbs);
 
@@ -24866,7 +24866,7 @@
 
 	var _axios2 = _interopRequireDefault(_axios);
 
-	var _keys = __webpack_require__(243);
+	var _keys = __webpack_require__(232);
 
 	var _keys2 = _interopRequireDefault(_keys);
 
@@ -25997,6 +25997,81 @@
 
 /***/ },
 /* 232 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	// Add your last.fm api key here...
+	// Get one: http://www.last.fm/api/account/create
+	var keys = {
+
+	    lastfm: 'XXXXXX'
+
+	};
+
+	exports.default = keys;
+
+/***/ },
+/* 233 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var Breadcrumbs = function Breadcrumbs(_ref) {
+	    var links = _ref.links;
+
+	    links.unshift({ href: '#', text: 'Home' });
+
+	    return _react2.default.createElement(
+	        'div',
+	        { className: 'row' },
+	        _react2.default.createElement(
+	            'div',
+	            { className: 'large-12 columns' },
+	            _react2.default.createElement(
+	                'nav',
+	                { 'aria-label': 'You are here:', role: 'navigation' },
+	                _react2.default.createElement(
+	                    'ul',
+	                    { className: 'breadcrumbs' },
+	                    links.map(function (link, index) {
+	                        return _react2.default.createElement(
+	                            'li',
+	                            { key: index, className: link.href ? '' : 'disabled' },
+	                            link.href ? _react2.default.createElement(
+	                                'a',
+	                                { href: link.href },
+	                                link.text
+	                            ) : link.text
+	                        );
+	                    })
+	                )
+	            )
+	        )
+	    );
+	};
+
+	Breadcrumbs.propTypes = {
+	    links: _react2.default.PropTypes.array.isRequired
+	};
+
+	exports.default = Breadcrumbs;
+
+/***/ },
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -26073,7 +26148,7 @@
 	exports.default = ScreenInfo;
 
 /***/ },
-/* 233 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26168,7 +26243,7 @@
 	exports.default = Home;
 
 /***/ },
-/* 234 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26187,15 +26262,15 @@
 
 	var _music2 = _interopRequireDefault(_music);
 
-	var _Breadcrumbs = __webpack_require__(235);
+	var _Breadcrumbs = __webpack_require__(233);
 
 	var _Breadcrumbs2 = _interopRequireDefault(_Breadcrumbs);
 
-	var _Albums = __webpack_require__(236);
+	var _Albums = __webpack_require__(237);
 
 	var _Albums2 = _interopRequireDefault(_Albums);
 
-	var _Similar = __webpack_require__(238);
+	var _Similar = __webpack_require__(239);
 
 	var _Similar2 = _interopRequireDefault(_Similar);
 
@@ -26382,7 +26457,7 @@
 	exports.default = Artist;
 
 /***/ },
-/* 235 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26395,63 +26470,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var Breadcrumbs = function Breadcrumbs(_ref) {
-	    var links = _ref.links;
-
-	    links.unshift({ href: '#', text: 'Home' });
-
-	    return _react2.default.createElement(
-	        'div',
-	        { className: 'row' },
-	        _react2.default.createElement(
-	            'div',
-	            { className: 'large-12 columns' },
-	            _react2.default.createElement(
-	                'nav',
-	                { 'aria-label': 'You are here:', role: 'navigation' },
-	                _react2.default.createElement(
-	                    'ul',
-	                    { className: 'breadcrumbs' },
-	                    links.map(function (link, index) {
-	                        return _react2.default.createElement(
-	                            'li',
-	                            { key: index, className: link.href ? '' : 'disabled' },
-	                            link.href ? _react2.default.createElement(
-	                                'a',
-	                                { href: link.href },
-	                                link.text
-	                            ) : link.text
-	                        );
-	                    })
-	                )
-	            )
-	        )
-	    );
-	};
-
-	Breadcrumbs.propTypes = {
-	    links: _react2.default.PropTypes.array.isRequired
-	};
-
-	exports.default = Breadcrumbs;
-
-/***/ },
-/* 236 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _AlbumList = __webpack_require__(237);
+	var _AlbumList = __webpack_require__(238);
 
 	var _AlbumList2 = _interopRequireDefault(_AlbumList);
 
@@ -26481,7 +26500,7 @@
 	exports.default = Albums;
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -26567,7 +26586,7 @@
 	exports.default = AlbumList;
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26580,7 +26599,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _SimilarList = __webpack_require__(239);
+	var _SimilarList = __webpack_require__(240);
 
 	var _SimilarList2 = _interopRequireDefault(_SimilarList);
 
@@ -26610,7 +26629,7 @@
 	exports.default = Similar;
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26701,7 +26720,7 @@
 	exports.default = SimilarList;
 
 /***/ },
-/* 240 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26720,11 +26739,11 @@
 
 	var _music2 = _interopRequireDefault(_music);
 
-	var _Breadcrumbs = __webpack_require__(235);
+	var _Breadcrumbs = __webpack_require__(233);
 
 	var _Breadcrumbs2 = _interopRequireDefault(_Breadcrumbs);
 
-	var _Tracks = __webpack_require__(241);
+	var _Tracks = __webpack_require__(242);
 
 	var _Tracks2 = _interopRequireDefault(_Tracks);
 
@@ -26866,7 +26885,7 @@
 	exports.default = AlbumInfo;
 
 /***/ },
-/* 241 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26879,7 +26898,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _TrackList = __webpack_require__(242);
+	var _TrackList = __webpack_require__(243);
 
 	var _TrackList2 = _interopRequireDefault(_TrackList);
 
@@ -26907,7 +26926,7 @@
 	exports.default = Tracks;
 
 /***/ },
-/* 242 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26954,25 +26973,6 @@
 	};
 
 	exports.default = TrackList;
-
-/***/ },
-/* 243 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	// Add your last.fm api key here...
-	// Get one: http://www.last.fm/api/account/create
-	var keys = {
-
-	    lastfm: '636d81e5364ebc98a99d202c57268f18'
-
-	};
-
-	exports.default = keys;
 
 /***/ }
 /******/ ]);
