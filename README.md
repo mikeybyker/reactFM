@@ -10,4 +10,7 @@ es6 flavour javascript used - uses [webpack](https://webpack.github.io/) and [ba
 npm install
 ```
 
+#### Add your [Last.fm](http://www.last.fm/api/account/create) API key to app/config/keys.js
+
+
 Mike
