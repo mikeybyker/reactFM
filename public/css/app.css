@@ -1,0 +1,29 @@
+.top-bar
+{
+    margin-bottom: 1rem;
+}
+.sticky-nav
+{
+    width: 100%;
+}
+
+.album-list .thumbnail
+{
+    margin-bottom: 0;
+}
+.faked-active:hover
+{
+    cursor: pointer;
+}
+.row.dev-info p
+{
+    margin-right: 1rem;
+}
+/* Weird F6 applying 100% at all sizes... */
+.stacked-for-small .top-bar-left, .stacked-for-small .top-bar-right, .top-bar-left, .top-bar-right {
+    width: auto;
+}
+.track-list
+{
+    margin-left: 1.5rem;
+}
